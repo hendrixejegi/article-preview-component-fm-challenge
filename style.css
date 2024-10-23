@@ -1,0 +1,124 @@
+/* RESET */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
+}
+
+:root {
+  --HEADER-COLOR: #505364;
+  --P-COLOR: #868d97;
+}
+
+body {
+  min-height: 100vh;
+  background-color: #edf2f8;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  padding: 10% 5%;
+}
+
+.article {
+  display: flex;
+  flex-flow: column nowrap;
+  background-color: #fff;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+}
+
+.article-image {
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.article-description {
+  padding: 6%;
+}
+
+.article-description-title {
+  color: var(--HEADER-COLOR);
+  font-weight: 500;
+  line-height: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.article-description-summary {
+  color: var(--P-COLOR);
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.article-footer {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.article-footer-information {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+
+.article-footer img {
+  max-height: 40px;
+  border-radius: 50%;
+  margin-right: 1.25rem;
+}
+
+.article-information {
+  height: 40px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+}
+
+.author {
+  color: var(--HEADER-COLOR);
+  font-weight: 500;
+}
+
+.date-created {
+  color: var(--P-COLOR);
+  font-size: 0.875rem;
+}
+
+.share-button {
+  height: 40px;
+  width: 40px;
+  border: none;
+  border-radius: 50%;
+  background-image: url(/images/icon-share.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 20px;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media screen and (min-width: 768px) {
+  .article {
+    flex-flow: row nowrap;
+    max-width: 800px;
+  }
+
+  .article-image {
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 10px;
+  }
+}
