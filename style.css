@@ -38,7 +38,7 @@ body {
 }
 
 .article-description {
-  padding: 6%;
+  padding: 5%;
 }
 
 .article-description-title {
@@ -114,11 +114,13 @@ body {
 @media screen and (min-width: 768px) {
   .article {
     flex-flow: row nowrap;
-    max-width: 800px;
+    max-width: 700px;
   }
 
   .article-image {
     border-top-right-radius: 0;
     border-bottom-left-radius: 10px;
+    height: 100%;
+    object-fit: cover;
   }
 }
