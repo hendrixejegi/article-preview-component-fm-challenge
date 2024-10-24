@@ -19,16 +19,11 @@
   <body>
     <main>
       <div class="article">
-        <figure class="article-image-container">
-          <img
-            src="/images/drawers.jpg"
-            alt="Image of drawers"
-            class="article-image"
-          />
-        </figure>
-
+        <div class="article-image-container">
+          <img src="/images/drawers.jpg" alt="Drawers" class="article-image" />
+        </div>
         <div class="decription-container">
-          <section class="article-description">
+          <div class="article-description">
             <h2 class="article-description-title">
               Shift the overall look and feel by adding these wonderful touches
               to furniture in your home
@@ -38,19 +33,26 @@
               it felt slightly bare and uninviting. I’ve got some simple tips to
               help you make any room feel complete.
             </p>
-          </section>
+          </div>
           <div class="article-footer">
             <div class="article-footer-information">
-              <figure>
-                <img src="/images/avatar-michelle.jpg" alt="Avatar" />
-              </figure>
+              <img src="/images/avatar-michelle.jpg" alt="Avatar" />
+
               <div class="article-information">
                 <p class="author">Michelle Appleton</p>
                 <p class="date-created">28 Jun 2020</p>
               </div>
             </div>
+            <button class="js-share-button share-button" aria-haspopup="false">
+              <svg xmlns="http://www.w3.org/2000/svg" width="15" height="13">
+                <path
+                  fill="#6E8098"
+                  d="M15 6.495L8.766.014V3.88H7.441C3.33 3.88 0 7.039 0 10.936v2.049l.589-.612C2.59 10.294 5.422 9.11 8.39 9.11h.375v3.867L15 6.495z"
+                />
+              </svg>
+            </button>
             <div class="share-container hidden">
-              <p>share</p>
+              <h4>share</h4>
               <ul class="share-container-links">
                 <li class="link">
                   <a href="#">
@@ -69,14 +71,6 @@
                 </li>
               </ul>
             </div>
-            <button class="js-share-button share-button">
-              <svg xmlns="http://www.w3.org/2000/svg" width="15" height="13">
-                <path
-                  fill="#6E8098"
-                  d="M15 6.495L8.766.014V3.88H7.441C3.33 3.88 0 7.039 0 10.936v2.049l.589-.612C2.59 10.294 5.422 9.11 8.39 9.11h.375v3.867L15 6.495z"
-                />
-              </svg>
-            </button>
           </div>
         </div>
       </div>

@@ -12,12 +12,7 @@ shareButton.addEventListener("click", () => {
 
   shareButton.classList.toggle("btn-active"); // Change button background
 
-  changeButtonFill(fillValue);
-
-  displayShareOptions(screenWidth);
-});
-
-function changeButtonFill(fillValue) {
+  // Change fill value of share button
   if (fillValue === "#6E8098") {
     shareButton.firstElementChild.firstElementChild.setAttribute(
       "fill",
@@ -29,9 +24,8 @@ function changeButtonFill(fillValue) {
       "#6E8098"
     );
   }
-}
 
-function displayShareOptions(screenWidth) {
+  // Show link menu based on screen width
   if (screenWidth < 768) {
     footerElem.classList.toggle("show-links");
     footerInfoContainer.classList.toggle("hidden");
@@ -40,4 +34,21 @@ function displayShareOptions(screenWidth) {
     linkContainer.classList.toggle("hidden");
     linkContainer.classList.toggle("large-screen");
   }
-}
+
+  // Set aria attribute for share button
+  if (
+    footerElem.classList.contains("show-links") ||
+    linkContainer.classList.contains("large-screen")
+  ) {
+    shareButton.setAttribute("aria-haspopup", "true");
+  } else {
+    shareButton.setAttribute("aria-haspopup", "false");
+  }
+
+  // Change flex direction for smaller screens
+  if (footerElem.classList.contains("show-links")) {
+    footerElem.style.flexFlow = "row-reverse nowrap";
+  } else {
+    footerElem.style.flexFlow = "row nowrap";
+  }
+});

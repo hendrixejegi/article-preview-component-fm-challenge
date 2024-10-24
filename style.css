@@ -137,7 +137,7 @@ body {
   align-items: center;
 }
 
-.share-container p {
+.share-container h4 {
   font-size: 0.875;
   color: var(--P-COLOR);
   text-transform: uppercase;
@@ -167,11 +167,8 @@ body {
     flex-flow: row nowrap;
   }
 
-  .article-image-container {
-    max-width: 300px;
-  }
-
   .article-image {
+    max-width: 300px;
     border-top-right-radius: 0;
     border-bottom-left-radius: 10px;
     height: 100%;
