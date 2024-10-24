@@ -52,3 +52,27 @@ shareButton.addEventListener("click", () => {
     footerElem.style.flexFlow = "row nowrap";
   }
 });
+
+document.addEventListener("keyup", (event) => {
+  if (event.key === "Escape") {
+    if (footerElem.classList.contains("show-links")) {
+      footerElem.classList.remove("show-links");
+      footerInfoContainer.classList.remove("hidden");
+      linkContainer.classList.add("hidden");
+      footerElem.style.flexFlow = "row nowrap";
+      shareButton.classList.remove("btn-active");
+      shareButton.firstElementChild.firstElementChild.setAttribute(
+        "fill",
+        "#6E8098"
+      );
+    } else if (linkContainer.classList.contains("large-screen")) {
+      linkContainer.classList.add("hidden");
+      linkContainer.classList.remove("large-screen");
+      shareButton.classList.remove("btn-active");
+      shareButton.firstElementChild.firstElementChild.setAttribute(
+        "fill",
+        "#6E8098"
+      );
+    }
+  }
+});
