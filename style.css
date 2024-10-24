@@ -118,6 +118,7 @@ body {
   width: 35px;
   border: none;
   border-radius: 50%;
+  background-color: #ebf3fc;
   /* background-image: url(/images/icon-share.svg);
   background-position: center;
   background-repeat: no-repeat;
@@ -125,10 +126,19 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
+
+  svg {
+    fill: #6e8098;
+  }
 }
 
-.btn-active {
+.share-button:hover {
   background-color: #6f7f98;
+
+  svg {
+    fill: #e7edf4;
+  }
 }
 
 .share-container {
@@ -193,7 +203,7 @@ body {
     top: 0;
     padding: 1.25rem 2.5rem;
     border-radius: 15px;
-    transform: translate(75px, -90px);
+    transform: translate(73px, -90px);
     box-shadow: 0px 6px 22px -3px rgba(143, 137, 143, 1);
     -webkit-box-shadow: 0px 6px 22px -3px rgba(143, 137, 143, 1);
     -moz-box-shadow: 0px 6px 22px -3px rgba(143, 137, 143, 1);

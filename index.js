@@ -7,23 +7,6 @@ const linkContainer = document.querySelector(".share-container");
 
 shareButton.addEventListener("click", () => {
   const screenWidth = window.innerWidth; //Grab the current screen width
-  const fillValue =
-    shareButton.firstElementChild.firstElementChild.attributes.fill.value; //Grab the color of shareButton
-
-  shareButton.classList.toggle("btn-active"); // Change button background
-
-  // Change fill value of share button
-  if (fillValue === "#6E8098") {
-    shareButton.firstElementChild.firstElementChild.setAttribute(
-      "fill",
-      "#e7edf4"
-    );
-  } else {
-    shareButton.firstElementChild.firstElementChild.setAttribute(
-      "fill",
-      "#6E8098"
-    );
-  }
 
   // Show link menu based on screen width
   if (screenWidth < 768) {
@@ -60,19 +43,9 @@ document.addEventListener("keyup", (event) => {
       footerInfoContainer.classList.remove("hidden");
       linkContainer.classList.add("hidden");
       footerElem.style.flexFlow = "row nowrap";
-      shareButton.classList.remove("btn-active");
-      shareButton.firstElementChild.firstElementChild.setAttribute(
-        "fill",
-        "#6E8098"
-      );
     } else if (linkContainer.classList.contains("large-screen")) {
       linkContainer.classList.add("hidden");
       linkContainer.classList.remove("large-screen");
-      shareButton.classList.remove("btn-active");
-      shareButton.firstElementChild.firstElementChild.setAttribute(
-        "fill",
-        "#6E8098"
-      );
     }
   }
 });
