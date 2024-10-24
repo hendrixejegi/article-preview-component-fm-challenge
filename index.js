@@ -6,8 +6,32 @@ const footerInfoContainer = document.querySelector(
 const linkContainer = document.querySelector(".share-container");
 
 shareButton.addEventListener("click", () => {
-  const screenWidth = window.innerWidth;
+  const screenWidth = window.innerWidth; //Grab the current screen width
+  const fillValue =
+    shareButton.firstElementChild.firstElementChild.attributes.fill.value; //Grab the color of shareButton
 
+  shareButton.classList.toggle("btn-active"); // Change button background
+
+  changeButtonFill(fillValue);
+
+  displayShareOptions(screenWidth);
+});
+
+function changeButtonFill(fillValue) {
+  if (fillValue === "#6E8098") {
+    shareButton.firstElementChild.firstElementChild.setAttribute(
+      "fill",
+      "#e7edf4"
+    );
+  } else {
+    shareButton.firstElementChild.firstElementChild.setAttribute(
+      "fill",
+      "#6E8098"
+    );
+  }
+}
+
+function displayShareOptions(screenWidth) {
   if (screenWidth < 768) {
     footerElem.classList.toggle("show-links");
     footerInfoContainer.classList.toggle("hidden");
@@ -16,4 +40,4 @@ shareButton.addEventListener("click", () => {
     linkContainer.classList.toggle("hidden");
     linkContainer.classList.toggle("large-screen");
   }
-});
+}
