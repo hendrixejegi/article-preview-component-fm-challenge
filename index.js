@@ -11,7 +11,6 @@ shareButton.addEventListener("click", () => {
   // Show link menu based on screen width
   if (screenWidth < 768) {
     footerElem.classList.toggle("show-links");
-    footerInfoContainer.classList.toggle("hidden");
     linkContainer.classList.toggle("hidden");
   } else {
     linkContainer.classList.toggle("hidden");
@@ -26,13 +25,6 @@ shareButton.addEventListener("click", () => {
     shareButton.setAttribute("aria-haspopup", "true");
   } else {
     shareButton.setAttribute("aria-haspopup", "false");
-  }
-
-  // Change flex direction for smaller screens
-  if (footerElem.classList.contains("show-links")) {
-    footerElem.style.flexFlow = "row-reverse nowrap";
-  } else {
-    footerElem.style.flexFlow = "row nowrap";
   }
 });
 
